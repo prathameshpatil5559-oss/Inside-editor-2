@@ -86,7 +86,7 @@ class _ChartPainter extends CustomPainter {
     final path = Path()..moveTo(0,size.height*.78)..cubicTo(size.width*.18,size.height*.68,size.width*.23,size.height*.55,size.width*.36,size.height*.6)..cubicTo(size.width*.5,size.height*.67,size.width*.55,size.height*.34,size.width*.68,size.height*.43)..cubicTo(size.width*.8,size.height*.52,size.width*.86,size.height*.2,size.width,size.height*.25);
     canvas.drawPath(path,p);
     final grid=Paint()..color=Colors.grey.withOpacity(.25)..strokeWidth=1;
-    for(int i=1;i<4;i++){ final y=size.height*i/4; canvas.drawLine(0,y,size.width,y,grid); }
+    for(int i=1;i<4;i++){ final y=size.height*i/4; canvas.drawLine(Offset(0, y), Offset(size.width, y), grid); }
   }
   @override bool shouldRepaint(covariant CustomPainter oldDelegate)=>false;
 }
